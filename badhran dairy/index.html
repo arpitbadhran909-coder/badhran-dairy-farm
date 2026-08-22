@@ -1,0 +1,1318 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="Gf0_HaynfJPuzEGciuh0qNguoyoIWZn1o8c5Aw8aJkg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Badhran Dairy Shop | Fresh & Pure</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8fff9;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 7%;
+
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            color: #087b38;
+        }
+
+        .logo span {
+            color: #f5a900;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 3px;
+            background: #087b38;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-btn {
+            text-decoration: none;
+            background: #087b38;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .header-btn:hover {
+            background: #055d2a;
+            transform: scale(1.05);
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 140px 7% 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background:
+                radial-gradient(circle at 80% 30%, #dff8e8 0%, transparent 35%),
+                linear-gradient(135deg, #fffdf0, #eafff1);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            width: 52%;
+            animation: slideLeft 1s ease;
+        }
+
+        .small-title {
+            color: #087b38;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.05;
+            color: #075b2b;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #f3a400;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #555;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 15px 27px;
+            border-radius: 35px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #087b38;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #055d2a;
+            transform: translateY(-4px);
+        }
+
+        .btn-secondary {
+            border: 2px solid #087b38;
+            color: #087b38;
+        }
+
+        .btn-secondary:hover {
+            background: #087b38;
+            color: white;
+        }
+
+        /* Milk bottle */
+
+        .hero-product {
+            width: 43%;
+            height: 450px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            animation: slideRight 1s ease;
+        }
+
+        .milk-bottle {
+            width: 210px;
+            height: 310px;
+
+            background: linear-gradient(
+                90deg,
+                #d4d0d0,
+                #ffffff,
+                #e8e8e8
+            );
+
+            border-radius: 35px 35px 55px 55px;
+
+            position: relative;
+
+            box-shadow:
+                20px 25px 35px rgba(0, 0, 0, 0.15),
+                inset 10px 0 20px rgba(255,255,255,0.8);
+
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .milk-bottle::before {
+            content: "";
+            position: absolute;
+
+            width: 90px;
+            height: 50px;
+
+            top: -35px;
+            left: 60px;
+
+            background: #087b38;
+
+            border-radius: 15px 15px 5px 5px;
+        }
+
+        .milk-bottle::after {
+            content: "BADHRAN\A DAIRY";
+
+            white-space: pre;
+
+            position: absolute;
+
+            left: 25px;
+            right: 25px;
+            top: 105px;
+
+            padding: 20px 5px;
+
+            text-align: center;
+
+            background: #d8d513;
+            color: rgb(214, 202, 202)0);
+
+            font-size: 19px;
+            font-weight: bold;
+
+            border-radius: 12px;
+        }
+
+        /* Floating bubbles */
+
+        .bubble {
+            position: absolute;
+
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.8);
+
+            animation: bubble 5s infinite ease-in;
+        }
+
+        .bubble:nth-child(1) {
+            left: 10%;
+            bottom: -30px;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            left: 35%;
+            bottom: -30px;
+            animation-delay: 1.5s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 65%;
+            bottom: -30px;
+            animation-delay: 3s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 85%;
+            bottom: -30px;
+            animation-delay: 2s;
+        }
+
+
+        /* ================= SECTION ================= */
+
+        .section {
+            padding: 100px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading h2 {
+            font-size: 43px;
+            color: #075b2b;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #777;
+            font-size: 17px;
+        }
+
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            background: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fff;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 22px;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: 0.4s;
+        }
+
+        .product-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 5px;
+
+            top: 0;
+            left: 0;
+
+            background: #087b38;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.13);
+        }
+
+        .product-icon {
+            width: 110px;
+            height: 110px;
+
+            margin: 10px auto 20px;
+
+            border-radius: 50%;
+
+            background: #effbf2;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 55px;
+
+            transition: 0.4s;
+        }
+
+        .product-card:hover .product-icon {
+            transform: rotate(8deg) scale(1.1);
+        }
+
+        .product-card h3 {
+            font-size: 23px;
+            color: #075b2b;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #777;
+            line-height: 1.5;
+            min-height: 45px;
+        }
+
+        .price {
+            margin-top: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #ef9f00;
+        }
+
+        .order-small {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 10px 20px;
+
+            border-radius: 25px;
+
+            background: #087b38;
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .order-small:hover {
+            background: #055d2a;
+            transform: scale(1.05);
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #effaf1;
+
+            display: flex;
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .about-image {
+            width: 45%;
+
+            min-height: 400px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    rgba(0,100,50,0.1),
+                    rgba(0,100,50,0.1)
+                ),
+                #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 170px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .about-content {
+            width: 55%;
+        }
+
+        .about-content h2 {
+            font-size: 43px;
+            color: #075b2b;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .feature {
+            background: white;
+            padding: 17px;
+
+            border-radius: 12px;
+
+            font-weight: bold;
+            color: #075b2b;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+
+        /* ================= WHY US ================= */
+
+        .why-us {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            background: #f7fff8;
+
+            transition: 0.3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            background: #effaf1;
+        }
+
+        .why-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .why-card h3 {
+            color: #075b2b;
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background:
+                linear-gradient(135deg, #075b2b, #0b8a43);
+
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-heading h2 {
+            color: white;
+        }
+
+        .contact .section-heading p {
+            color: #d9f2df;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            width: 280px;
+
+            padding: 30px;
+
+            background: rgba(255,255,255,0.12);
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            border-radius: 20px;
+
+            backdrop-filter: blur(10px);
+
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.18);
+        }
+
+        .contact-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #e4f7e8;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #043d1c;
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 10px;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #c7dfce;
+        }
+
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+        }
+
+        @keyframes bubble {
+
+            0% {
+                transform: translateY(0) scale(0.5);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-600px) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideLeft {
+
+            from {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideRight {
+
+            from {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 1000px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero-product {
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-content {
+                width: 100%;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .header-btn {
+                padding: 9px 14px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 70px 5%;
+            }
+
+            .section-heading h2 {
+                font-size: 34px;
+            }
+
+            .about-content h2 {
+                font-size: 34px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 300px;
+                font-size: 120px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            Badhran <span>Dairy</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#why">Why Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="header-btn">
+            Order Now
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                🥛 100% Fresh & Pure Dairy Products
+            </div>
+
+            <h1>
+                Freshness You Can
+                <span>Taste.</span>
+            </h1>
+
+            <p>
+                Welcome to <b>Badhran Dairy Shop</b>.
+                We provide fresh milk, creamy lassi,
+                delicious paneer and many more dairy
+                products for your family.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn btn-primary">
+                    Explore Products
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-product">
+
+            <div class="milk-bottle"></div>
+
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="section products" id="products">
+
+        <div class="section-heading">
+
+            <h2>Our Dairy Products</h2>
+
+            <p>
+                Fresh, delicious and prepared with care
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- Milk -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🥛
+                </div>
+
+                <h3>Fresh Milk</h3>
+
+                <p>
+                    Pure and fresh milk delivered every day.
+                </p>
+
+                <div class="price">
+                    ₹60 / Litre
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Lassi -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🥤
+                </div>
+
+                <h3>Fresh Lassi</h3>
+
+                <p>
+                    Thick, creamy and refreshing lassi.
+                </p>
+
+                <div class="price">
+                    ₹40 / Glass
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Paneer -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🧀
+                </div>
+
+                <h3>Fresh Paneer</h3>
+
+                <p>
+                    Soft and delicious fresh homemade paneer.
+                </p>
+
+                <div class="price">
+                    ₹350 / Kg
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Curd -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🍶
+                </div>
+
+                <h3>Fresh Curd</h3>
+
+                <p>
+                    Thick, creamy and naturally fermented curd.
+                </p>
+
+                <div class="price">
+                    ₹40 / 500g
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Butter -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🧈
+                </div>
+
+                <h3>Butter</h3>
+
+                <p>
+                    Smooth and creamy dairy butter.
+                </p>
+
+                <div class="price">
+                    ₹60 / 100g
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Ghee -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🫙
+                </div>
+
+                <h3>Pure Ghee</h3>
+
+                <p>
+                    Rich and aromatic pure dairy ghee.
+                </p>
+
+                <div class="price">
+                    ₹650 / Kg
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Cream -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🍨
+                </div>
+
+                <h3>Fresh Cream</h3>
+
+                <p>
+                    Smooth and fresh dairy cream.
+                </p>
+
+                <div class="price">
+                    ₹80 / 250g
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <!-- Milk Shake -->
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🥛
+                </div>
+
+                <h3>Milk Shake</h3>
+
+                <p>
+                    Delicious and refreshing milk shakes.
+                </p>
+
+                <div class="price">
+                    ₹70 / Glass
+                </div>
+
+                <a href="#contact" class="order-small">
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section about" id="about">
+
+        <div class="about-image">
+            🐄
+        </div>
+
+
+        <div class="about-content">
+
+            <h2>
+                Pure Dairy. Happy Family.
+            </h2>
+
+            <p>
+                At <b>Badhran Dairy Shop</b>, our goal is simple:
+                provide fresh, tasty and quality dairy products
+                to every customer.
+            </p>
+
+            <p>
+                From fresh morning milk to delicious lassi,
+                paneer, curd, butter and ghee, we focus on
+                freshness and quality.
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+                    ✓ Fresh Every Day
+                </div>
+
+                <div class="feature">
+                    ✓ Pure Products
+                </div>
+
+                <div class="feature">
+                    ✓ Quality Checked
+                </div>
+
+                <div class="feature">
+                    ✓ Affordable Prices
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY US ================= -->
+
+    <section class="section why-us" id="why">
+
+        <div class="section-heading">
+
+            <h2>Why Choose Us?</h2>
+
+            <p>
+                Quality and freshness in every product
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🥛
+                </div>
+
+                <h3>Fresh Milk</h3>
+
+                <p>
+                    Fresh dairy products prepared
+                    with care and delivered to you.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ⭐
+                </div>
+
+                <h3>Best Quality</h3>
+
+                <p>
+                    We focus on quality and freshness
+                    in every dairy product.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ❤️
+                </div>
+
+                <h3>Customer Trust</h3>
+
+                <p>
+                    Your satisfaction and trust are
+                    our biggest priorities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section contact" id="contact">
+
+        <div class="section-heading">
+
+            <h2>Visit Badhran Dairy Shop</h2>
+
+            <p>
+                Come and enjoy fresh dairy products every day.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>Shop Location</h3>
+
+                <p>
+                    Badhran Dairy Shop<br>
+                    ladwa,Haryana, India
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>Call Us</h3>
+
+                <p>
+                    +91 9053473787
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    ⏰
+                </div>
+
+                <h3>Opening Hours</h3>
+
+                <p>
+                    Every Day<br>
+                    6:00 AM - 9:00 PM
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>
+            Badhran Dairy Shop 🥛
+        </h2>
+
+        <p>
+            • Quality You Can Trust
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 Badhran Dairy Shop. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
+```
